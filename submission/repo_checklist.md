@@ -31,6 +31,7 @@ Use this checklist to verify repository cleanliness, security, compliance, and r
 - [x] **AMD Smoke Test**: `pipeline/amd_smoke_test.py` validates AMD ROCm hardware presence and checks `torch.version.hip`.
 - [x] **Hardware Labeling**: Run metadata truthfully logs `device: "rocm"` only when running on AMD HIP; CPU execution is explicitly labeled as `cpu` without claims of hardware acceleration.
 - [x] **Plumbing Test vs Evidence**: CPU sample run (`sample-cpu-20261013T232238`) is clearly documented in all files as a plumbing test (SAMPLE RUN), not evidence.
+- [x] **No Unsupported Claims**: All unbacked claims (cryptographic verification, speedup, savings, novelty, accuracy) removed or clarified. SHA-256 hashes of the scores file and policy are documented as stored in the audit export so later changes can be detected. All AMD speed claims are marked as TODO(human) until results/benchmark.json exists.
 - [x] **Provisional Hosting Option**: Option 2 selected (host app reading precomputed AMD results + recorded live AMD ROCm GPU run), pending organizer confirmation.
 
 ---

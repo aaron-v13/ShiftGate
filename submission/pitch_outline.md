@@ -32,14 +32,16 @@
 
 ---
 
-## Slide 5: Architecture & AMD ROCm Acceleration
-- **System 1 (AMD Accelerated Pipeline)**:
+## Slide 5: Architecture & AMD ROCm Pipeline
+- **System 1 (AMD ROCm Pipeline)**:
   - Deep feature extraction (WideResNet-50) and memory bank coreset subsampling.
-  - Accelerated on AMD ROCm (HIP) using AMD Developer Cloud hardware.
+  - Executed on AMD ROCm (HIP) using AMD Developer Cloud hardware.
   - Generates verifiable scores, metadata, and anomaly localization maps.
+  - Hardware speed / throughput: `TODO(human)` [pending results/benchmark.json]
 - **System 2 (Inspection Gate & Decision Cockpit)**:
-  - Pure Python gate engine enforcing policy rules and cryptographic SHA-256 integrity.
-  - Streamlit review interface with station status, differential metrics, and tamper-evident audit exports.
+  - Pure Python gate engine enforcing policy rules.
+  - SHA-256 hashes of the scores file and policy are stored in the audit export so later changes can be detected.
+  - Streamlit review interface with station status, differential metrics, and compliance exports.
 
 ---
 
@@ -50,23 +52,24 @@
   - **Baseline (`v1_current`)**: High false-hold rate under shifted conditions (`TODO(human): X` false holds).
   - **Careless Update (`v2_candidate_loose`)**: Drastically reduces false holds (`TODO(human): Y` false holds), but newly misses critical defects (`TODO(human): Z` newly missed defects) &rarr; **`🛑 BLOCK`**.
   - **Reviewed Update (`v3_candidate_reviewed`)**: Matches the false-hold reduction (`TODO(human): Y` false holds) while preserving 100% defect recall (`TODO(human): 0` newly missed defects) &rarr; **`✅ ALLOW`**.
+- **Inference Speed / Latency**: `TODO(human)` [pending results/benchmark.json]
 - *Note: Final quantitative benchmark numbers will be populated upon completion of the AMD Developer Cloud full run.*
 
 ---
 
 ## Slide 7: Honesty, Limits & Methodology Notes
 - **Scripted Failure Scenario**: The contaminated reference update is scripted by design (simulating an engineer approving an unvetted batch) to rigorously demonstrate the gate mechanism. It is not presented as an accidental finding.
-- **Anomaly Detection Novelty**: PatchCore is established literature; our primary innovation is the **update-gating, regression-testing, and approval workflow** for industrial vision systems.
+- **Anomaly Detection**: PatchCore is established literature (Roth et al., 2022); our contribution is the **update-gating, regression-testing, and approval workflow** for industrial vision systems.
 - **Synthetic Shift**: Visual distribution shifts were generated with controlled lighting/contrast perturbations on the AmazonScience RobustAD PCB dataset.
-- **Sample Size Context**: Validation sets are compact; results are reported with exact counts alongside percentages to represent workflow fidelity rather than unbounded factory scale.
+- **Sample Size Context**: Validation sets are compact; results are reported with exact counts alongside percentages to represent workflow fidelity rather than production accuracy.
 
 ---
 
 ## Slide 8: Business Value Hypothesis
 - **Safety**: Eliminates silent defect escapes caused by careless model re-baselining, protecting brand reputation and preventing costly field recalls.
-- **Triage Efficiency**: Slashes engineering investigation time by pinpointing exactly which board decisions flipped and why.
-- **Auditability**: Produces cryptographic compliance bundles for ISO 9001 / IATF 16949 audit readiness.
-- *Value Hypothesis*: Stated as a clear hypothesis to validate in plant trials: reducing update triage time by 70%+ while preventing reference contamination incidents.
+- **Triage Efficiency**: Helps engineers evaluate candidate updates by pinpointing exactly which board decisions flipped and why.
+- **Auditability**: SHA-256 hashes of the scores file and policy are stored in the audit export so later changes can be detected.
+- *Value Hypothesis*: Stated as a hypothesis to validate in plant trials: reducing engineering update triage time while preventing reference contamination incidents.
 
 ---
 

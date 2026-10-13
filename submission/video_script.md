@@ -96,22 +96,22 @@ This video script follows the click-path demonstrated in `docs/DEMO_FLOW.md`.
 
 ---
 
-## Scene 6: AMD ROCm Acceleration & Audit Export (2:25 – 2:50)
+## Scene 6: AMD ROCm Execution & Audit Export (2:25 – 2:50)
 - **Visual**:
   - Cut to terminal/video overlay showing live execution on AMD Developer Cloud:
     `python -m pipeline.run_pipeline --config config.yaml --device cuda`
   - Show HIP / ROCm device verification: `torch.version.hip`.
   - Cut back to Screen 6: `pages/6_Export.py`.
-  - Show cryptographic SHA-256 hashes of the scores file, policy snapshot, and version IDs.
+  - Show SHA-256 hashes of the scores file, policy snapshot, and version IDs stored in the export.
   - Click `⬇️ Download Audit Package`.
 - **Narrator**:
-  - "Under the hood, feature extraction and reference scoring are accelerated on AMD ROCm GPUs using AMD Developer Cloud hardware.
-  - Finally, on the Export screen, ShiftGate compiles an immutable compliance bundle with SHA-256 cryptographic hashes of the raw scores, policy rules, and decision logs.
+  - "Under the hood, feature extraction and reference scoring run on AMD ROCm GPUs using AMD Developer Cloud hardware. GPU speed and benchmark throughput are tracked in the benchmark suite once the full run completes.
+  - On the Export screen, ShiftGate compiles an audit bundle where SHA-256 hashes of the scores file and policy are stored in the audit export so later changes can be detected.
   - Quality teams download a complete, audit-ready package meeting ISO 9001 and IATF 16949 standards."
 - **On-Screen Captions**:
-  - *Accelerated on AMD ROCm (AMD Developer Cloud).*
-  - *Hardware-verified via PyTorch HIP.*
-  - *Cryptographic compliance bundle with SHA-256 audit trail.*
+  - *Executed on AMD ROCm (AMD Developer Cloud).*
+  - *Hardware-verified via PyTorch HIP (Speed: TODO(human) pending benchmark.json).*
+  - *SHA-256 hashes stored in audit export to detect later changes.*
 
 ---
 

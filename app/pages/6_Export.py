@@ -34,7 +34,7 @@ active_version = registry.get("active_version", "v1_current")
 render_header(
     title="📦 Audit & Compliance Bundle Export",
     is_mock=paths.is_mock,
-    subtitle="Export cryptographically verifiable evaluation bundles for production quality audit trails",
+    subtitle="Export evaluation bundles for production quality audit trails",
 )
 
 candidate_option = st.sidebar.selectbox(
@@ -79,7 +79,8 @@ except Exception as e:
     st.error(f"Failed to assemble export bundle: {e}")
     st.stop()
 
-st.markdown("### Cryptographic Hashes (SHA-256)")
+st.markdown("### Hashes (SHA-256)")
+st.caption("SHA-256 hashes of the scores file and policy are stored in the audit export so later changes can be detected.")
 hashes = report.get("hashes", {})
 for k, v in hashes.items():
     st.code(f"{k}: {v}", language="text")

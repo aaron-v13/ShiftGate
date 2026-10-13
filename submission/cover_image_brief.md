@@ -30,7 +30,7 @@
 - **Sub-headline (24pt Sans-Serif)**:
   - **`Safe Reference Updates for Visual AI Inspection`**
 - **Key Callout Pills**:
-  - `AMD ROCm Accelerated` | `Zero Defect Escapes` | `Audit-Grade Quality Gate`
+  - `AMD ROCm Execution` | `Zero Defect Escapes Policy` | `Station Audit Gate`
 - **Bottom Footnote**:
   - `Track 1: Intelligent Industry`
 

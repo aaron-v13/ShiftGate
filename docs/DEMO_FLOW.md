@@ -83,6 +83,6 @@ This demo walkthrough tests the complete ShiftGate workflow using the sample dat
 ## 6. Audit & Compliance Export (`pages/6_Export.py`)
 - **What to look at:**
   - Select `v3_candidate_reviewed`.
-  - Review the SHA-256 cryptographic hashes for the scores file, policy snapshot, and version IDs.
+  - Review the SHA-256 hashes for the scores file, policy snapshot, and version IDs, which are stored in the audit export so later changes can be detected.
 - **Action:**
   - Click **`⬇️ Download Audit Package`** to receive a timestamped zip archive containing `gate_report.json`, `changed_decisions.csv`, `policy_snapshot.yaml`, `hashes.json`, and `review_decisions.json`.

@@ -23,7 +23,7 @@ When visual distribution shift occurs:
 
 - **Quality & Process Engineers**: Reviewing and approving vision model updates with explainable, differential metrics and defect-level attribution before line activation.
 - **Station Line Operators**: Protected from false alarm surges while assured that critical defect detection remains uncompromised.
-- **Factory Quality Directors & Auditors**: Demanding tamper-evident, cryptographically verifiable compliance trails (ISO 9001, IATF 16949) for all vision AI updates.
+- **Factory Quality Directors & Auditors**: Demanding traceable compliance trails (ISO 9001, IATF 16949) where SHA-256 hashes of the scores file and policy are stored in the audit export so later changes can be detected.
 
 ---
 
@@ -64,7 +64,7 @@ When visual distribution shift occurs:
 |         +--> Quality Reviewer Approval & Audit Note Required                                          |
 |         +--> Atomic Version Registry Promotion (`v1_current` -> `v3_candidate_reviewed`)              |
 |         +--> Instant One-Click Rollback Support                                                       |
-|         +--> Cryptographic Compliance Export (SHA-256 Bundle: report, policy, decisions, hashes)      |
+|         +--> Audit Export (SHA-256 hashes of scores and policy stored so later changes can be detected)|
 +-------------------------------------------------------------------------------------------------------+
 ```
 
@@ -195,6 +195,7 @@ pytest tests/gate_test_*.py tests/app_test_*.py -q
 | **Shift False Holds** | `TODO(human)` | `TODO(human)` | `TODO(human)` |
 | **Defect Recall** | `TODO(human)` | `TODO(human)` | `TODO(human)` |
 | **Newly Missed Defects** | — | `TODO(human)` | `TODO(human)` |
+| **Inference Latency / Speed** | — | — | `TODO(human): pending results/benchmark.json` |
 | **Gate Safety Decision** | Active Baseline | **`🛑 BLOCK`** | **`✅ ALLOW`** |
 
 ### B. Note on the CPU Sample Run
@@ -209,15 +210,16 @@ The preliminary run (`sample-cpu-20261013T232238`) was conducted solely as a loc
 2. **Prior Work Attribution**: PatchCore is established literature (Roth et al., 2022). ShiftGate's core contribution is the **update-gating, differential regression evaluation, safety policy, and governance workflow**.
 3. **Synthetic Shift**: Visual distribution shifts in testing were generated via calibrated lighting and contrast transformations on the PCB dataset.
 4. **Validation Dataset Scope**: Because industrial validation sets are compact, ShiftGate always presents exact counts alongside percentage rates to prevent misleading rate interpretations.
-5. **Business Value Hypothesis**: Operational savings (e.g. reduced engineering triage hours) are formulated as an empirical value hypothesis to be validated in factory trials, rather than guaranteed figures.
+5. **Business Value Hypothesis**: Operational impact (e.g. reduced engineering triage hours) is formulated as an empirical value hypothesis to be validated in factory trials, rather than a proven saving.
 
 ---
 
 ## 9. Deployment Architecture (STOP C Decision)
 
 In alignment with hackathon guidelines, ShiftGate adopts **Option 2 (provisional)**:
-- The Streamlit review cockpit is hosted publicly reading precomputed, cryptographically verified AMD Developer Cloud run results.
+- The Streamlit review cockpit is hosted publicly reading precomputed AMD Developer Cloud run results (SHA-256 hashes of the scores file and policy are stored in the audit export so later changes can be detected).
 - A recorded live demonstration of the AMD ROCm GPU execution on AMD Developer Cloud hardware accompanies the submission to verify live hardware operation.
+
 
 ---
 

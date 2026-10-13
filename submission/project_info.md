@@ -21,9 +21,9 @@ ShiftGate solves this critical safety failure by introducing an automated inspec
 2. **Defect-Escape Prevention**: Automatically sets an immutable `BLOCK` decision whenever an update causes any previously detected defect to pass.
 3. **Hero Inspection Cockpit**: Visualizes newly missed defects, score regressions, and localization heatmaps side-by-side so quality engineers see exactly what changed.
 4. **Controlled Promotion & Instant Rollback**: Requires explicit reviewer sign-off for allowable updates and maintains an auditable version registry with one-click rollback.
-5. **Cryptographic Compliance Export**: Generates tamper-evident audit packages with SHA-256 hashes of datasets, policies, and decisions for regulatory compliance.
+5. **Compliance Audit Export**: SHA-256 hashes of the scores file and policy are stored in the audit export so later changes can be detected.
 
-ShiftGate couples an AMD ROCm-accelerated feature extraction and memory-bank scoring pipeline (running on AMD Developer Cloud hardware) with a clean, decoupled decision app that keeps factory lines safe and compliant.
+ShiftGate couples an AMD ROCm feature extraction and memory-bank scoring pipeline (running on AMD Developer Cloud hardware; execution speed: TODO(human) until results/benchmark.json exists) with a clean, decoupled decision app that keeps factory lines safe and compliant.
 
 ### Selected Challenge
 Track 1: Intelligent Industry
