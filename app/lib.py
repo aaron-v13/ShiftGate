@@ -229,6 +229,18 @@ def compare_review_decisions_to_bank(
     return notes
 
 
+def save_gate_report(report: dict[str, Any], candidate: str, paths: AppPaths) -> Path:
+    """Save gate report to results/gate_report_<candidate>.json in real mode or mock folder."""
+    if paths.is_mock:
+        dest = paths.out_dir / f"gate_report_{candidate}.json"
+    else:
+        dest = Path(f"results/gate_report_{candidate}.json")
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    with open(dest, "w", encoding="utf-8") as f:
+        json.dump(report, f, indent=2)
+    return dest
+
+
 def build_zip_archive(bundle_dir: str | Path) -> bytes:
     """Compress contents of bundle directory into in-memory zip bytes."""
     src = Path(bundle_dir)

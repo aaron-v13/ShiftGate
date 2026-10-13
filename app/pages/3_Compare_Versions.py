@@ -8,6 +8,7 @@ from app.lib import (
     load_run_metadata,
     render_header,
     render_run_info,
+    save_gate_report,
 )
 from gate.api import get_registry, run_gate
 
@@ -47,6 +48,7 @@ try:
         current=active_version,
         candidate=candidate_option,
     )
+    save_gate_report(report, candidate_option, paths)
 except Exception as e:
     st.error(f"Error executing gate comparator: {e}")
     st.stop()

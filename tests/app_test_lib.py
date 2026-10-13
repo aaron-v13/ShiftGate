@@ -105,3 +105,14 @@ def test_get_current_false_holds() -> None:
     df = pd.read_csv("gate/FAKE_scores.csv")
     fh = get_current_false_holds(df, active_version="v1_current", condition="shift_a")
     assert fh == 6
+
+
+def test_save_gate_report() -> None:
+    """Assert save_gate_report writes report to correct destination."""
+    from app.lib import save_gate_report
+    paths = get_app_paths(mode="mock")
+    report = {"activation": "BLOCK", "candidate_version": "v2_test"}
+    dest = save_gate_report(report, "v2_test", paths)
+    assert dest.exists()
+    assert dest.name == "gate_report_v2_test.json"
+
