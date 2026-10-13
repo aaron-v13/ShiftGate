@@ -1,0 +1,5 @@
+threshold_percentile: 99
+max_newly_missed_defects: 0
+min_defect_recall: 0.8
+min_false_hold_reduction: 1
+require_all_conditions: true
