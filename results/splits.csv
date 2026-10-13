@@ -1,0 +1,33 @@
+image_id,path,category,condition,split,true_label,defect_type
+normal__Test_PCB_resized_None_None_Normal_Set2_190,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/normal/Test_PCB_resized_None_None_Normal_Set2_190.jpg,PCB,baseline,test,good,
+normal__Test_PCB_resized_None_None_Normal_Set2_197,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/normal/Test_PCB_resized_None_None_Normal_Set2_197.jpg,PCB,shift_a,candidate_pool,good,
+normal__Test_PCB_resized_None_None_Normal_Set2_211,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/normal/Test_PCB_resized_None_None_Normal_Set2_211.jpg,PCB,shift_a,test,good,
+normal__Test_PCB_resized_None_None_Normal_Set2_213,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/normal/Test_PCB_resized_None_None_Normal_Set2_213.jpg,PCB,baseline,test,good,
+normal__Test_PCB_resized_None_None_Normal_Set2_228,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/normal/Test_PCB_resized_None_None_Normal_Set2_228.jpg,PCB,shift_a,calibration,good,
+normal__Test_PCB_resized_None_None_Normal_Set2_232,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/normal/Test_PCB_resized_None_None_Normal_Set2_232.jpg,PCB,shift_a,validation,good,
+normal__Test_PCB_resized_None_None_Normal_Set2_243,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/normal/Test_PCB_resized_None_None_Normal_Set2_243.jpg,PCB,baseline,reference_v1,good,
+normal__Test_PCB_resized_None_None_Normal_Set2_249,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/normal/Test_PCB_resized_None_None_Normal_Set2_249.jpg,PCB,baseline,validation,good,
+normal__Test_PCB_resized_None_None_Normal_Set2_260,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/normal/Test_PCB_resized_None_None_Normal_Set2_260.jpg,PCB,shift_a,candidate_pool,good,
+normal__Test_PCB_resized_None_None_Normal_Set2_263,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/normal/Test_PCB_resized_None_None_Normal_Set2_263.jpg,PCB,baseline,reference_v1,good,
+normal__Test_PCB_resized_None_None_Normal_Set2_265,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/normal/Test_PCB_resized_None_None_Normal_Set2_265.jpg,PCB,baseline,calibration,good,
+normal__Test_PCB_resized_None_None_Normal_Set2_268,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/normal/Test_PCB_resized_None_None_Normal_Set2_268.jpg,PCB,shift_a,validation,good,
+normal__Test_PCB_resized_None_None_Normal_Set2_269,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/normal/Test_PCB_resized_None_None_Normal_Set2_269.jpg,PCB,baseline,reference_v1,good,
+normal__Test_PCB_resized_None_None_Normal_Set2_273,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/normal/Test_PCB_resized_None_None_Normal_Set2_273.jpg,PCB,shift_a,test,good,
+normal__Test_PCB_resized_None_None_Normal_Set2_274,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/normal/Test_PCB_resized_None_None_Normal_Set2_274.jpg,PCB,baseline,validation,good,
+normal__Test_PCB_resized_None_None_Normal_Set2_276,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/normal/Test_PCB_resized_None_None_Normal_Set2_276.jpg,PCB,baseline,reference_v1,good,
+normal__Test_PCB_resized_None_None_Normal_Set2_277,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/normal/Test_PCB_resized_None_None_Normal_Set2_277.jpg,PCB,shift_a,calibration,good,
+normal__Test_PCB_resized_None_None_Normal_Set2_278,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/normal/Test_PCB_resized_None_None_Normal_Set2_278.jpg,PCB,shift_a,candidate_pool,good,
+normal__Test_PCB_resized_None_None_Normal_Set2_290,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/normal/Test_PCB_resized_None_None_Normal_Set2_290.jpg,PCB,shift_a,candidate_pool,good,
+normal__Test_PCB_resized_None_None_Normal_Set2_295,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/normal/Test_PCB_resized_None_None_Normal_Set2_295.jpg,PCB,baseline,calibration,good,
+anomaly__Test_PCB_None_None_Missing Component_21,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/anomaly/Test_PCB_None_None_Missing Component_21.jpg,PCB,baseline,validation,defect,Missing Component
+anomaly__Test_PCB_None_None_Missing Component_28,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/anomaly/Test_PCB_None_None_Missing Component_28.jpg,PCB,shift_a,validation,defect,Missing Component
+anomaly__Test_PCB_None_None_Missing Component_29,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/anomaly/Test_PCB_None_None_Missing Component_29.jpg,PCB,shift_a,test,defect,Missing Component
+anomaly__Test_PCB_None_None_Missing Component_30,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/anomaly/Test_PCB_None_None_Missing Component_30.jpg,PCB,shift_a,contaminant,defect,Missing Component
+anomaly__Test_PCB_None_None_Scratch_15,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/anomaly/Test_PCB_None_None_Scratch_15.jpg,PCB,baseline,test,defect,Scratch
+anomaly__Test_PCB_None_None_Scratch_2,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/anomaly/Test_PCB_None_None_Scratch_2.jpg,PCB,baseline,test,defect,Scratch
+anomaly__Test_PCB_None_None_Scratch_25,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/anomaly/Test_PCB_None_None_Scratch_25.jpg,PCB,shift_a,validation,defect,Scratch
+anomaly__Test_PCB_None_None_Scratch_27,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/anomaly/Test_PCB_None_None_Scratch_27.jpg,PCB,shift_a,test,defect,Scratch
+anomaly__Test_PCB_None_None_Soldering Melt_15,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/anomaly/Test_PCB_None_None_Soldering Melt_15.jpg,PCB,baseline,validation,defect,Soldering Melt
+anomaly__Test_PCB_None_None_Soldering Melt_20,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/anomaly/Test_PCB_None_None_Soldering Melt_20.jpg,PCB,shift_a,validation,defect,Soldering Melt
+anomaly__Test_PCB_None_None_Soldering Melt_3,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/anomaly/Test_PCB_None_None_Soldering Melt_3.jpg,PCB,baseline,test,defect,Soldering Melt
+anomaly__Test_PCB_None_None_Soldering Melt_30,C:/Users/Vivek Malik/Desktop/ShiftGate_B/data/sample/anomaly/Test_PCB_None_None_Soldering Melt_30.jpg,PCB,baseline,validation,defect,Soldering Melt

@@ -1,0 +1,6 @@
+image_id,path,condition,is_contaminant,in_v3_bank
+normal__Test_PCB_resized_None_None_Normal_Set2_260,C:/Users/ASUS/OneDrive/Desktop/ShiftGate_A/data/sample/normal/Test_PCB_resized_None_None_Normal_Set2_260.jpg,shift_a,False,True
+anomaly__Test_PCB_None_None_Missing Component_30,C:/Users/ASUS/OneDrive/Desktop/ShiftGate_A/data/sample/anomaly/Test_PCB_None_None_Missing Component_30.jpg,shift_a,True,False
+normal__Test_PCB_resized_None_None_Normal_Set2_278,C:/Users/ASUS/OneDrive/Desktop/ShiftGate_A/data/sample/normal/Test_PCB_resized_None_None_Normal_Set2_278.jpg,shift_a,False,True
+normal__Test_PCB_resized_None_None_Normal_Set2_197,C:/Users/ASUS/OneDrive/Desktop/ShiftGate_A/data/sample/normal/Test_PCB_resized_None_None_Normal_Set2_197.jpg,shift_a,False,True
+normal__Test_PCB_resized_None_None_Normal_Set2_290,C:/Users/ASUS/OneDrive/Desktop/ShiftGate_A/data/sample/normal/Test_PCB_resized_None_None_Normal_Set2_290.jpg,shift_a,False,True

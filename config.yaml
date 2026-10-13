@@ -1,0 +1,23 @@
+seed: 42
+category: PCB
+data_root: data/sample
+results_dir: results
+mode: sample              # sample | full  (goes into run_id and run_meta notes)
+device: auto              # auto | cpu | cuda
+image_size: 256
+crop_size: 224
+batch_size: 8
+coreset_ratio: 0.1        # fraction of patches kept per bank image
+contaminant_keep_ratio: 1.0
+n_contaminant: 1
+save_maps: true           # validation split only
+shift:
+  type: auto              # auto = native if dataset has it, else synthetic
+  brightness: 0.7
+  contrast: 0.9
+  wb_red: 1.08
+  wb_blue: 0.92
+fractions:                # of the GOOD images in each condition
+  baseline: {reference_v1: 0.4, calibration: 0.2, validation: 0.2, test: 0.2}
+  shift_a:  {candidate_pool: 0.4, calibration: 0.2, validation: 0.2, test: 0.2}
+defect_fractions: {validation: 0.5, test: 0.5}   # after removing the contaminant

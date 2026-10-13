@@ -69,6 +69,7 @@ def test_format_run_info() -> None:
 def test_check_missing_files_messages() -> None:
     """Assert missing file messages clearly indicate file name and producing system."""
     paths = get_app_paths(mode="real")
+    paths.scores_path = Path("results/nonexistent_scores.csv")
     missing = check_missing_files(paths)
     assert len(missing) >= 1
     assert any("System 1" in m for m in missing)
