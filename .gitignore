@@ -22,6 +22,11 @@ venv/
 ENV/
 env/
 
+# Mock test artifacts
+app/.mock_out/
+gate/registry_mock.json
+
 # System and OS
 .DS_Store
 Thumbs.db
+
