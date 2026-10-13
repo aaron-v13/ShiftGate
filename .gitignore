@@ -1,0 +1,25 @@
+# Data and weights
+data/raw/
+*.pt
+*.pth
+*.bin
+*.onnx
+*.weights
+
+# Python & caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environments
+.venv/
+venv/
+ENV/
+env/
+
+# System and OS
+.DS_Store
+Thumbs.db
