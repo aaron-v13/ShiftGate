@@ -1,4 +1,4 @@
-"""Test gate evaluation with real scores fixture."""
+"""Test gate evaluation with sample real scores fixture (plumbing test / SAMPLE RUN, not evidence)."""
 
 from pathlib import Path
 import pytest
@@ -9,7 +9,7 @@ import pandas as pd
 
 @pytest.fixture
 def sample_real_scores_path() -> Path:
-    """Return path to sample_real_scores fixture."""
+    """Return path to sample_real_scores fixture (plumbing test / SAMPLE RUN)."""
     p = Path("tests/fixtures/sample_real_scores.csv")
     assert p.exists()
     return p
@@ -22,7 +22,7 @@ def test_sample_real_scores_schema(sample_real_scores_path: Path) -> None:
 
 
 def test_sample_real_scores_gate_evaluation(sample_real_scores_path: Path) -> None:
-    """Assert gate evaluation on real scores fixture detects newly missed defects and blocks."""
+    """Assert gate evaluation executes correctly on sample real scores fixture (plumbing test)."""
     policy_path = Path("gate/policy.yaml")
     report = run_gate(sample_real_scores_path, policy_path, "v1_current", "v2_candidate_loose")
 
