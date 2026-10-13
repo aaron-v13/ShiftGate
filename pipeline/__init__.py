@@ -1,0 +1,1 @@
+"""ShiftGate pipeline package."""

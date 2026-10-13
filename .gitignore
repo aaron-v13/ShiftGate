@@ -1,0 +1,32 @@
+# Data and weights
+data/raw/
+*.pt
+*.pth
+*.bin
+*.onnx
+*.weights
+
+# Python & caches
+__pycache__/
+*.pyc
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+.streamlit/
+
+# Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Mock test artifacts
+app/.mock_out/
+gate/registry_mock.json
+
+# System and OS
+.DS_Store
+Thumbs.db
+

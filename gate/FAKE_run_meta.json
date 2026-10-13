@@ -1,0 +1,23 @@
+{
+  "run_id": "FAKE-cpu-20261013T120000",
+  "device": "cpu",
+  "gpu_name": null,
+  "torch_version": "2.2.0+fake",
+  "hip_version": null,
+  "seed": 42,
+  "n_images": 78,
+  "batch_size": 16,
+  "image_size": 256,
+  "timings_sec": {
+    "features": 2.5,
+    "bank": 1.2,
+    "scoring": 3.8
+  },
+  "dataset": {
+    "name": "FAKE_PCB",
+    "category": "pcb",
+    "licence": "CC-BY-4.0",
+    "shift_type": "synthetic"
+  },
+  "notes": "FAKE"
+}
