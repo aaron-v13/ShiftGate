@@ -1,5 +1,14 @@
 """ShiftGate Changed Decisions Hero Screen (Screen 4)."""
 
+import sys
+from pathlib import Path
+
+# Ensure the repo root is on sys.path so app.* and gate.* are importable
+# when Streamlit runs this file directly (Streamlit does not use pytest.ini).
+_REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
+
 from pathlib import Path
 from PIL import Image, ImageDraw
 import pandas as pd
