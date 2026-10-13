@@ -207,13 +207,48 @@ def generate_fake_data(out_dir: str | Path = "gate", seed: int = 42) -> tuple[pd
 
     scores_file = out_path / "FAKE_scores.csv"
     meta_file = out_path / "FAKE_run_meta.json"
+    cand_file = out_path / "FAKE_candidate_list.csv"
 
     df.to_csv(scores_file, index=False)
     with open(meta_file, "w", encoding="utf-8") as f:
         json.dump(meta, f, indent=2)
+
+    # 4. Candidate pool (candidate_list.csv)
+    cand_rows = [
+        {
+            "image_id": "fake_cand_001",
+            "path": "data/fake/candidates/fake_cand_001.png",
+            "condition": "shift_a",
+            "is_contaminant": False,
+            "in_v3_bank": True,
+        },
+        {
+            "image_id": "fake_cand_002",
+            "path": "data/fake/candidates/fake_cand_002.png",
+            "condition": "shift_a",
+            "is_contaminant": False,
+            "in_v3_bank": True,
+        },
+        {
+            "image_id": "fake_cand_003",
+            "path": "data/fake/candidates/fake_cand_003.png",
+            "condition": "shift_a",
+            "is_contaminant": False,
+            "in_v3_bank": True,
+        },
+        {
+            "image_id": "fake_cand_004",
+            "path": "data/fake/candidates/fake_cand_004.png",
+            "condition": "shift_a",
+            "is_contaminant": True,
+            "in_v3_bank": False,
+        },
+    ]
+    pd.DataFrame(cand_rows).to_csv(cand_file, index=False)
 
     return df, meta
 
 
 if __name__ == "__main__":
     generate_fake_data()
+

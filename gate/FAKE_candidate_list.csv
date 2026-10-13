@@ -1,0 +1,5 @@
+image_id,path,condition,is_contaminant,in_v3_bank
+fake_cand_001,data/fake/candidates/fake_cand_001.png,shift_a,False,True
+fake_cand_002,data/fake/candidates/fake_cand_002.png,shift_a,False,True
+fake_cand_003,data/fake/candidates/fake_cand_003.png,shift_a,False,True
+fake_cand_004,data/fake/candidates/fake_cand_004.png,shift_a,True,False
